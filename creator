@@ -1,0 +1,18 @@
+def chunk(my_list, size):
+    return [my_list[i:i+size] for i in range(0,len(my_list), size)]
+my_list = [1, 2, 3, 4, 5, 6]
+chunk(my_list, 2) # [[1, 2], [3, 4], [5, 6]]
+
+def merge(dic1,dic2):
+    dic3=dic1.copy()
+    dic3.update(dic2)
+    return dic3
+dic1={1:"hello", 2:"world"}
+dic2={3:"Python", 4:"Programming"}
+merge(dic1,dic2) # {1: 'hello', 2: 'world', 3: 'Python', 4: 'Programming'}
+
+import sys
+var1=[x for x in range(1000000)]
+var2=[var1]
+print(sys.getsizeof(var1)) #8448728
+print(sys.getsizeof(var2)) #64
